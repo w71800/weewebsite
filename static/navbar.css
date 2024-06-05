@@ -1,0 +1,31 @@
+#navbar {
+  background-color: #4665ff;
+}
+
+.logo {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.links {
+  padding: 10px 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.links .link {
+  margin-left: 50px;
+}
+.links .link a {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}

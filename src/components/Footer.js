@@ -1,3 +1,9 @@
+import "@/styles/footer.sass"
+
 export default function Footer() {
-  return <h1> Footer </h1>
+  return (
+    <div id="footer">
+      <div className="container"></div>
+    </div>
+  )
 }
