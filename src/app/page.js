@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Hero from "./sections/hero";
 
 export default function Home() {
-  return <h1> HELLO，THIS IS HOME</h1>
+  return (
+    <Hero/>
+  )
 }

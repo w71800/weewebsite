@@ -20,12 +20,19 @@
   align-items: center;
 }
 .links .link {
-  margin-left: 50px;
+  margin-right: 50px;
+}
+.links .link:last-child {
+  margin-right: 0;
 }
 .links .link a {
   font-size: 1.2rem;
-  vertical-align: middle;
   color: white;
   font-weight: 700;
   text-decoration: none;
+  z-index: 2;
+}
+
+.link:hover a {
+  color: #f5dc50;
 }

@@ -21,11 +21,34 @@
   display: flex
   align-items: center
   .link
-    margin-left: 50px
+    margin-right: 50px
+    &:last-child
+      margin-right: 0
+    // &::after
+    //   content: ""
+    //   display: block
+    //   background-color: $color_sub
+    //   width: 0px
+    //   height: 15px
+    //   position: absolute
+    //   top: 0
+    //   z-index: 1
+    //   transition: width .3s
+    //   transform-origin: 50% 50%
+    //   transform: rotate(-30deg)
     a
       font-size: 1.2rem
-      vertical-align: middle
       color: $color_sub
       font-weight: 700
       text-decoration: none
+      z-index: 2
     
+
+// functional style
+.link
+  &:hover
+    a
+      color: $color_dec
+    // &::after
+    //   width: 50px
+      
