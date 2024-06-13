@@ -4,6 +4,10 @@ html, body {
   padding: 0;
 }
 
+h1, p {
+  margin: 0;
+}
+
 * {
   font-family: "Noto Sans", sans-serif;
   position: relative;
@@ -13,6 +17,15 @@ html, body {
   margin: 0 auto;
 }
 
-h1 {
-  color: #4665ff;
+h1.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #888;
+  margin-bottom: 1.2rem;
+}
+
+p.content {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }

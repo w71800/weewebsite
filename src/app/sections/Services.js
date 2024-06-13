@@ -4,7 +4,7 @@ import Image from "next/image"
 import style from "@/styles/services.sass"
 import { useState } from 'react'
 
-export default function About() {
+export default function Services() {
   const services = [
     {
       title: "服務項目一",
@@ -36,7 +36,7 @@ export default function About() {
 
   
   return (
-    <section id="about">
+    <section id="services">
       <div className="container">
         <div className="services">
           { services.map((service, index) => {
