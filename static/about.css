@@ -1,0 +1,59 @@
+#about {
+  padding: 20px 0px;
+  background-color: #fafafa;
+}
+#about .container {
+  display: flex;
+  padding: 0px 50px;
+}
+#about .services, #about .show {
+  flex: 1;
+}
+#about .services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#about .service {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+#about .service:last-child {
+  margin-bottom: 0px;
+}
+#about .show {
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+}
+#about .icon {
+  margin-bottom: 30px;
+  width: 100px;
+  height: 100px;
+}
+#about .title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+#about .content {
+  height: 200px;
+}
+#about .more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#about .more a {
+  color: #666;
+  font-weight: 300;
+}
+
+#about .service:hover {
+  color: #4665ff;
+}

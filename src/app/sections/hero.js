@@ -10,7 +10,7 @@ export default function Hero() {
         height={300}
         alt="hero"
       />
-      <div className="slider"></div>
+      {/* <div className="slider"></div> */}
     </section>
   )
 }
