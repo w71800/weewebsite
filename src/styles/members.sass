@@ -1,0 +1,108 @@
+@import ./_variables
+
+#members, #members *
+  // border: 1px solid #000
+
+.carousel
+  // border: 1px solid red
+
+#members
+  .container
+    display: flex
+    align-items: center
+    justify-content: center
+  
+  .left
+    flex: 1
+    display: flex
+    align-items: center
+    & .title
+      margin-bottom: 0
+  
+  .right
+    flex: 2
+
+  .window
+    padding: 20px 0px
+    width: 80%
+    height: 500px
+    margin: 0 auto
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    // border: 1px solid #000
+  
+  .carousel, .carousel *
+    user-select: none
+
+  .cards
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .memberCard, .memberCard *
+    // border: 1px solid red
+
+  .memberCard
+    $gap: 30px
+    $cardWidth: 250px
+    $translateX: calc(-100px + var(--delta) * $cardWidth + var(--index) * $gap)
+    $translateY: calc(abs(var(--delta)) * 25px * -1)
+    $skewY: calc(-1 * var(--delta) * 3deg)
+    
+    position: absolute
+    transform-style: preserve-3d
+    cursor: pointer
+    border-radius: 4px
+    border: 2px solid #888
+    overflow: hidden
+    transform: translateX($translateX) translateY($translateY) skewY($skewY)
+    transition: transform .3s, opacity .5s
+    opacity: 1
+    box-shadow: 0px 30px 10px -15px rgba(black, .4)
+    img
+      width: $cardWidth
+      height: 300px
+      object-fit: cover
+      margin-bottom: 20px
+    h1, h3
+      text-align: center
+    h1
+      margin-bottom: 20px
+  .btn
+    position: absolute
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1px solid #000
+    display: flex
+    align-items: center
+    justify-content: center
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+    opacity: 0.8
+    img
+      width: 60%
+      height: 60%
+    &.btn_left
+      left: 40px
+      img
+        transform: translateX(-2px)
+    &.btn_right
+      right: 40px
+      img
+        transform: translateX(2px)
+
+
+  
+
+
+  
+  .memberCard
+    &.hide
+      opacity: 0.2
+
+
+    

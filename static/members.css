@@ -1,0 +1,91 @@
+#members .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#members .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+#members .left .title {
+  margin-bottom: 0;
+}
+#members .right {
+  flex: 2;
+}
+#members .window {
+  padding: 20px 0px;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#members .carousel, #members .carousel * {
+  user-select: none;
+}
+#members .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#members .memberCard {
+  position: absolute;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid #888;
+  overflow: hidden;
+  transform: translateX(calc(-100px + var(--delta) * $cardWidth + var(--index) * $gap)) translateY(calc(abs(var(--delta)) * 25px * -1)) skewY(calc(-1 * var(--delta) * 3deg));
+  transition: transform 0.3s, opacity 0.5s;
+  opacity: 1;
+  box-shadow: 0px 30px 10px -15px rgba(0, 0, 0, 0.4);
+}
+#members .memberCard img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+#members .memberCard h1, #members .memberCard h3 {
+  text-align: center;
+}
+#members .memberCard h1 {
+  margin-bottom: 20px;
+}
+#members .btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.8;
+}
+#members .btn img {
+  width: 60%;
+  height: 60%;
+}
+#members .btn.btn_left {
+  left: 40px;
+}
+#members .btn.btn_left img {
+  transform: translateX(-2px);
+}
+#members .btn.btn_right {
+  right: 40px;
+}
+#members .btn.btn_right img {
+  transform: translateX(2px);
+}
+#members .memberCard.hide {
+  opacity: 0.2;
+}

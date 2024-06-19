@@ -1,0 +1,28 @@
+.memberCard, .memberCard *
+  border: 1px solid red
+
+.memberCard
+  position: absolute
+  margin-right: 40px
+  transform-style: preserve-3d
+  cursor: pointer
+  img
+    width: 200px
+    height: 150px
+    object-fit: cover
+    margin-bottom: 20px
+  h1, h3
+    text-align: center
+
+  h1
+    margin-bottom: 20px
+
+
+.memberCard
+  &.first, &.last
+    opacity: 0.4
+    // transform: translateY(-30px) rotateY(45deg) scale(0.95) skewY(5deg)
+  &.first
+    transform: translateY(-30px) rotateY(45deg) scale(0.95) skewY(5deg)
+  &.last
+    transform: translateY(-30px) rotateY(-45deg) scale(0.95) skewY(-5deg)
