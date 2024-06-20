@@ -2,7 +2,7 @@ import Image from "next/image"
 // import "@/styles/memberCard.sass"
 
 export default function MemberCard({data: member, ...props }) {
-  const { name, imgUrl, position } = member
+  const { name, imgUrl, position, content } = member
   return (
   <div 
     className={props.className}
@@ -16,6 +16,10 @@ export default function MemberCard({data: member, ...props }) {
     />
     <h1 className="name">{ name }</h1>
     <h3 className="position">{ position }</h3>
+    <div className="cover"></div>
+    <div className="content">
+      <span>「{ content }。」</span>
+    </div>
   </div>
 )
 }

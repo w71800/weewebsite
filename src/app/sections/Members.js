@@ -106,6 +106,10 @@ export default function Members() {
     console.log("");
     // setNowIndex(cardIndex)
   }
+
+  function handleMouseEnter() {
+    
+  }
   return (
     <div id="members">
       <div className="container">
@@ -128,8 +132,7 @@ export default function Members() {
                     key={index}
                     className={`
                       memberCard 
-                      ${index == 0 ? 'first' : index == memberDatas.length - 1 ? 'last' : ''}
-                      ${index != nowIndex ? 'hide' : ''}
+                      ${index != nowIndex ? 'hide' : 'active'}
                       `}
                     data={data}
                     style={

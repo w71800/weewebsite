@@ -9,6 +9,7 @@
   align-items: center;
 }
 #members .left .title {
+  font-size: 3.5rem;
   margin-bottom: 0;
 }
 #members .right {
@@ -16,7 +17,7 @@
 }
 #members .window {
   padding: 20px 0px;
-  width: 80%;
+  width: 75%;
   height: 500px;
   margin: 0 auto;
   overflow: hidden;
@@ -31,30 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#members .memberCard {
-  position: absolute;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  border-radius: 4px;
-  border: 2px solid #888;
-  overflow: hidden;
-  transform: translateX(calc(-100px + var(--delta) * $cardWidth + var(--index) * $gap)) translateY(calc(abs(var(--delta)) * 25px * -1)) skewY(calc(-1 * var(--delta) * 3deg));
-  transition: transform 0.3s, opacity 0.5s;
-  opacity: 1;
-  box-shadow: 0px 30px 10px -15px rgba(0, 0, 0, 0.4);
-}
-#members .memberCard img {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-#members .memberCard h1, #members .memberCard h3 {
-  text-align: center;
-}
-#members .memberCard h1 {
-  margin-bottom: 20px;
+  height: 100%;
+  width: 100%;
 }
 #members .btn {
   position: absolute;
@@ -86,6 +65,76 @@
 #members .btn.btn_right img {
   transform: translateX(2px);
 }
+#members .memberCard {
+  position: absolute;
+  top: 48px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateX(calc(-100px + var(--delta) * $cardWidth + var(--index) * $gap)) translateY(calc(abs(var(--delta)) * 25px * -1)) skewY(calc(-1 * var(--delta) * 3deg));
+  transition: transform 0.3s, opacity 0.5s, top 0.2s, box-shadow 0.2s;
+  opacity: 1;
+}
+#members .memberCard img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+#members .memberCard h1, #members .memberCard h3 {
+  text-align: center;
+}
+#members .memberCard h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+#members .memberCard h3 {
+  color: #888;
+  margin-bottom: 10px;
+}
+#members .memberCard .cover {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  background-color: black;
+  transition: height 0.4s;
+  top: 0;
+  opacity: 0.5;
+  overflow: hidden;
+}
+#members .memberCard .content {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+  flex-wrap: wrap;
+}
+#members .memberCard .content span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 80%;
+  line-height: 2rem;
+}
 #members .memberCard.hide {
   opacity: 0.2;
+}
+#members .memberCard.active {
+  cursor: pointer;
+  box-shadow: 0px 30px 10px -15px rgba(0, 0, 0, 0.4), 0px 3px 8px 8px rgba(136, 136, 136, 0.3);
+}
+#members .memberCard.active:hover {
+  top: 40px;
+  box-shadow: 0px 30px 10px -10px rgba(0, 0, 0, 0.3), 0px 5px 8px 3px rgba(136, 136, 136, 0.3);
+}
+#members .memberCard.active:hover .cover {
+  height: 100%;
+}
+#members .memberCard.active:hover .content {
+  opacity: 1;
 }
