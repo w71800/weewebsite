@@ -1,0 +1,44 @@
+@import ./_variables
+
+#contact, #contact *
+  // border: 1px solid #000
+
+#contact
+  text-align: center
+  padding: 30px 0px
+  background-color: $color_bgc_section
+  .container
+    width: min(1024px, 100%)
+  form *
+    display: block
+    font-size: 1rem
+    width: 200px
+    margin: 0px auto
+    margin-bottom: 20px
+    border: 2px solid #888
+    border-radius: 10px
+  textarea
+    resize: none
+    width: 600px
+    height: 300px
+    padding: 6px 8px
+  input[type='text']
+    padding: 6px 8px
+  input[type='submit']
+    padding: 10px 0px
+    cursor: pointer
+    background-color: $color_main
+    color: white
+    border: none
+    font-size: 1.3rem
+
+#contact
+  input[type='submit']
+    &:hover
+      background-color: $color_dec
+      color: darken($color_main, 10)
+      font-weight: 700
+  input[type='text'], textarea
+    &:focus
+      border: 2px solid $color_main
+    

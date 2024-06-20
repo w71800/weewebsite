@@ -1,3 +1,6 @@
+#members {
+  padding: 20px 0px;
+}
 #members .container {
   display: flex;
   align-items: center;
@@ -18,7 +21,7 @@
 #members .window {
   padding: 20px 0px;
   width: 75%;
-  height: 500px;
+  height: 520px;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
