@@ -1,5 +1,42 @@
 #footer {
-  background-color: #666;
-  height: 300px;
-  width: 100vw;
+  background-color: #3D3C42;
+  color: white;
+}
+#footer .container {
+  width: min(1280px, 100%);
+}
+#footer .title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 8px 15px;
+}
+#footer .item {
+  font-size: 1rem;
+  color: #909090;
+  font-weight: 500;
+  padding: 4px 15px;
+  cursor: pointer;
+}
+#footer .column {
+  flex-grow: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+#footer .left {
+  margin-right: 20px;
+}
+#footer .top {
+  padding: 20px 0px;
+}
+#footer .top .container {
+  display: flex;
+}
+#footer .right {
+  display: flex;
+  flex-grow: 1;
+}
+#footer .bottom {
+  background-color: #323237;
+  padding: 15px 0px;
+  text-align: center;
+  color: #909090;
 }
