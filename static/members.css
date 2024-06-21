@@ -1,5 +1,6 @@
 #members {
   padding: 20px 0px;
+  padding-bottom: 60px;
 }
 #members .container {
   display: flex;
@@ -40,10 +41,9 @@
 }
 #members .btn {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  border: 1px solid #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +67,23 @@
 }
 #members .btn.btn_right img {
   transform: translateX(2px);
+}
+#members .dots {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+#members .dot {
+  background-color: rgba(153, 153, 153, 0.3);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+#members .dot:last-child {
+  margin-right: 0px;
 }
 #members .memberCard {
   position: absolute;
@@ -124,6 +141,7 @@
   width: 80%;
   line-height: 2rem;
 }
+
 #members .memberCard.hide {
   opacity: 0.2;
 }
@@ -140,4 +158,11 @@
 }
 #members .memberCard.active:hover .content {
   opacity: 1;
+}
+#members .dot.active {
+  background-color: #777777;
+}
+#members .btn.inactive {
+  cursor: default;
+  opacity: 0.1;
 }

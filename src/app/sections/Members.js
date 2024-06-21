@@ -118,7 +118,10 @@ export default function Members() {
         </div>
         <div className="right">
           <div className="carousel">
-            <div className="btn btn_left" onClick={handleLeftClicked}>
+            <div 
+              className={`btn btn_left ${nowIndex === 0 ? 'inactive' : ''}`}
+              onClick={handleLeftClicked}
+            >
               <Image
                 src='/left-arrow.png'
                 width={64}
@@ -145,12 +148,26 @@ export default function Members() {
                 }) }
               </div>
             </div>
-            <div className="btn btn_right" onClick={handleRightClicked}>
+            <div 
+              className={`btn btn_right ${nowIndex === memberDatas.length - 1 ? 'inactive' : ''}`}
+              onClick={handleRightClicked}
+            >
               <Image
                 src='/right-arrow.png'
                 width={64}
                 height={64}
               />
+            </div>
+            <div className="dots">
+              { memberDatas.map( (data, index) => {
+                    return (
+                      <div 
+                        className={`dot ${index == nowIndex ? 'active' : ''}`}
+                      >
+                      </div>
+                    )
+                    })
+                }
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@
 
 #members
   padding: 20px 0px
+  padding-bottom: 60px
   .container
     display: flex
     align-items: center
@@ -37,6 +38,8 @@
   
   .carousel, .carousel *
     user-select: none
+  .carousel, .window
+    // border: 1px solid red
 
   .cards
     display: flex
@@ -47,10 +50,9 @@
 
   .btn
     position: absolute
-    width: 40px
-    height: 40px
+    width: 60px
+    height: 60px
     border-radius: 50%
-    border: 1px solid #000
     display: flex
     align-items: center
     justify-content: center
@@ -69,6 +71,21 @@
       right: 40px
       img
         transform: translateX(2px)
+  .dots
+    position: absolute
+    bottom: -5px
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+  .dot
+    background-color: rgba(#999, .3)
+    border-radius: 50%
+    width: 10px
+    height: 10px
+    margin-right: 6px
+    &:last-child
+      margin-right: 0px
+
 
   .memberCard, .memberCard *
     // border: 1px solid red
@@ -132,20 +149,29 @@
   
 
 
-  
+#members  
   .memberCard
     &.hide
       opacity: 0.2
-  .memberCard.active
-    cursor: pointer
-    box-shadow: 0px 30px 10px -15px rgba(black, .4), 0px 3px 8px 8px rgba(#888, .3)
-    &:hover
-      top: 40px
-      box-shadow: 0px 30px 10px -10px rgba(black, .3), 0px 5px 8px 3px rgba(#888, .3)
-      .cover
-        height: 100%
-      .content
-        opacity: 1
+  .memberCard
+    &.active
+      cursor: pointer
+      box-shadow: 0px 30px 10px -15px rgba(black, .4), 0px 3px 8px 8px rgba(#888, .3)
+      &:hover
+        top: 40px
+        box-shadow: 0px 30px 10px -10px rgba(black, .3), 0px 5px 8px 3px rgba(#888, .3)
+        .cover
+          height: 100%
+        .content
+          opacity: 1
+  .dot
+    &.active
+      background-color: rgba(#777, 1)
+  .btn
+    &.inactive
+      cursor: default
+      opacity: 0.1
+
 
 
     
