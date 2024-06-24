@@ -4,9 +4,10 @@ import Services from "./sections/Services";
 import Members from "./sections/Members";
 import Contact from "./sections/Contact";
 
-export default function Home() {
+
+export default async function Home() {
   return (
-    <>  
+    <>
       <Hero />
       <About />
       <Services />

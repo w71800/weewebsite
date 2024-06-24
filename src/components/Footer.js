@@ -1,7 +1,9 @@
 import "@/styles/footer.sass"
 import Image from "next/image"
 
-export default function Footer() {
+export default function Footer({ data }) {
+  const { services, products } = data
+
   return (
     <div id="footer">
       <div className="top">
@@ -17,16 +19,16 @@ export default function Footer() {
             <div className="right">
               <div className="column">
                 <div className="title">產品列表</div>
-                <div className="item">產品項目</div>
-                <div className="item">產品項目</div>
-                <div className="item">產品項目</div>
+                {products.map( (product, index) => (
+                  <div key={index} className="item"> {product} </div>
+                ))}
               </div>
               
               <div className="column">
                 <div className="title">服務列表</div>
-                <div className="item">服務項目</div>
-                <div className="item">服務項目</div>
-                <div className="item">服務項目</div>
+                {services.map( (service, index) => (
+                  <div key={index} className="item"> {service.title} </div>
+                ))}
               </div>
               <div className="column">
                 <div className="title">更多我們</div>
@@ -37,7 +39,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="bottom">
-          <div className="container">2014-2024 為人有限公司 All Rights Reserved</div>
+          <div className="container">2014 - 2024 為人有限公司 All Rights Reserved</div>
         </div>
     </div>
   )
