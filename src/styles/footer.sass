@@ -1,7 +1,7 @@
 @import ./_variables
 
 #footer, #footer *
-  // border: 1px solid black
+  // border: 1px solid white
   
 #footer
   background-color: $color_lighten_black
@@ -20,19 +20,46 @@
     cursor: pointer
   .column
     flex-grow: 1
-    border-right: 1px solid rgba(white, .6)
-  .left
-    margin-right: 20px
+    border-right: 1px solid rgba(white, .3)
   .top
     padding: 20px 0px
     .container
       display: flex
-  .right
-    display: flex
-    flex-grow: 1
   .bottom
     background-color: $color_darken_black
     padding: 15px 0px
     text-align: center
     color: $footer_color
+  span
+    margin-left: 25px
+    cursor: pointer
+    font-weight: 500
+  .column
+    &:first-child
+      .item
+        cursor: default
+    
+      
+#footer
+  .column:not(:first-child)
+    .item
+      // &::after
+      //   content: ""
+      //   display: block
+      //   position: absolute
+      //   left: 14px
+      //   bottom: 0
+      //   height: 2px
+      //   background-color: $color_dec
+      //   width: 0
+      &:hover
+        color: $color_dec
+        font-weight: 900
+        &::after
+          // transition: width .5s
+          // width: 85px
+  span
+    &:hover
+      color: $color_dec
+        
   
