@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       },
       {
         title: "服務項目三",
-        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id ",
+        content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id aliquid ducimus aspernatur doloribus deserunt voluptatum qui, natus, officiis excepturi illo debitis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id aliquid ducimus aspernatur doloribus deserunt voluptatum qui, natus, officiis excepturi illo debitis.",
         iconUrl: "/technical-support.png" 
       },
       {

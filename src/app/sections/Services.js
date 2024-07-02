@@ -6,25 +6,8 @@ import { useState } from 'react'
 import { useData } from "../contexts/DataContext";
 
 export default function Services() {
-  // const services = [
-  //   {
-  //     title: "服務項目一",
-  //     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id aliquid ducimus aspernatur doloribus deserunt voluptatum qui, natus, officiis excepturi illo debitis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id aliquid ducimus aspernatur doloribus deserunt voluptatum qui, natus, officiis excepturi illo debitis.",
-  //     iconUrl: "/customer-support.png" 
-  //   },
-  //   {
-  //     title: "服務項目二",
-  //     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id aliquid ducimus aspernatur doloribus deserunt",
-  //     iconUrl: "/support.png" 
-  //   },
-  //   {
-  //     title: "服務項目三",
-  //     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id ",
-  //     iconUrl: "/technical-support.png" 
-  //   },
-  // ]
   const { services } = useData()
-  const [selectedService, setSelectedService ] = useState({
+  const [ selectedService, setSelectedService ] = useState({
     title: "服務項目一",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis optio consequuntur itaque quos ducimus. Quis est modi, id aliquid ducimus aspernatur doloribus deserunt voluptatum qui, natus, officiis excepturi illo debitis.",
     iconUrl: "/customer-support.png" 

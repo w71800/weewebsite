@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 80%;
 }
 #members .left {
   flex: 1;
