@@ -10,7 +10,7 @@ export default function Navbar() {
     { content: '首頁', url: '/' },
     { content: '服務項目', url: '/services' },
     { content: '產品', url: '/products' },
-    { content: '技術分享', url: '/articles' }
+    { content: '官方部落格', url: '/articles' }
   ]
   const [ isHidden, setIsHidden ] = useState(false)
   const [ lastScrollY, setLastScrollY ] = useState(0)
@@ -18,13 +18,13 @@ export default function Navbar() {
   useEffect(() => {
     const controlNavbar = () => {
       if(typeof window !== "undefined") {
-        if(window.scrollY > lastScrollY) {
-          setIsHidden(true)
-        } else {
-          setIsHidden(false)
-        }
-
-        setLastScrollY(window.scrollY)
+        setIsHidden( previousIsHidden => {
+          return window.scrollY > lastScrollY
+        })
+        setLastScrollY( previousLastScrollY => {
+          // console.log(previousLastScrollY);
+          // return window.scrollY
+        })
       }
     };
 

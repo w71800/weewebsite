@@ -1,0 +1,24 @@
+#privacy {
+  background-color: #fafafa;
+}
+#privacy .container {
+  background-color: #fafafa;
+  padding-top: 100px;
+  padding-bottom: 64px;
+  width: 90%;
+}
+#privacy .title {
+  color: black;
+  text-align: center;
+}
+#privacy h4 {
+  margin: 1.2rem 0;
+  font-size: 1.3rem;
+}
+#privacy .content {
+  line-height: 2rem;
+  padding-left: 20px;
+}
+#privacy .item {
+  padding-left: 35px;
+}

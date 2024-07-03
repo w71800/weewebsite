@@ -38,14 +38,17 @@
   cursor: pointer;
   font-weight: 500;
 }
+#footer span a {
+  color: #909090;
+  text-decoration: none;
+}
 #footer .column:first-child .item {
   cursor: default;
 }
 
 #footer .column:not(:first-child) .item:hover {
   color: #f5dc50;
-  font-weight: 900;
 }
-#footer span:hover {
+#footer span:hover a {
   color: #f5dc50;
 }

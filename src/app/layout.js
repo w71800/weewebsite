@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         "iconUrl": "/technical-support.png"
       }
     ],
-    products: ["LINE QRCode 簽到系統", "疾病風險評估報告平台", "產品項目三"]
+    products: [ "LINE QRCode 簽到系統", "疾病風險評估報告平台" ]
   }
   return (
     <html lang="en">

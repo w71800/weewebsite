@@ -37,8 +37,9 @@ export default function Footer({ data }) {
         <div className="bottom">
           <div className="container">
             2014 - 2024 為人有限公司 All Rights Reserved
-            <span className="privacy"> 隱私權政策 </span>
-            <span className="privacy"> COOKIE 政策 </span>
+            <span className="privacy"> 
+              <a href="/privacy"> 隱私權政策 </a> 
+            </span>
           </div>
         </div>
     </div>
