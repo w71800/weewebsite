@@ -1,0 +1,56 @@
+@import ./_variables
+  
+.articleCard
+  // border: 2px solid red
+.articleCard *
+  // border: 1px solid #000
+
+.articleCard
+  display: flex
+  margin-bottom: 50px
+  border-bottom: 2px solid rgba(#999, .4)
+  padding-bottom: 30px
+  .left
+    flex: 1
+  .right
+    padding: 20px 30px
+    flex: 3
+  img
+    +size(100%)
+    object-fit: cover
+  .title
+    font-size: 2.5rem
+    font-weight: 700
+    color: #555
+    margin-bottom: 1rem
+  .content
+    color: #888
+    line-height: 2rem
+    font-size: 1.2rem
+  .icon
+    +size(50px)
+    border-radius: 50%
+    overflow: hidden
+    position: absolute
+    top: 10px
+    right: 10px
+  .readmore
+    position: absolute
+    bottom: 0
+    right: 20px
+    text-decoration: underline
+    color: #999
+    font-size: 1.2rem
+    cursor: pointer
+
+.title
+  span
+    font-size: 1rem
+    left: 1rem
+    color: #888
+    font-weight: 500
+
+#articles
+  .readmore
+    &:hover
+      color: $color_main

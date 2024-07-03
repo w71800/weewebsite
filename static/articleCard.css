@@ -1,0 +1,58 @@
+.articleCard {
+  display: flex;
+  margin-bottom: 50px;
+  border-bottom: 2px solid rgba(153, 153, 153, 0.4);
+  padding-bottom: 30px;
+}
+.articleCard .left {
+  flex: 1;
+}
+.articleCard .right {
+  padding: 20px 30px;
+  flex: 3;
+}
+.articleCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.articleCard .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.articleCard .content {
+  color: #888;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+.articleCard .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.articleCard .readmore {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  text-decoration: underline;
+  color: #999;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.title span {
+  font-size: 1rem;
+  left: 1rem;
+  color: #888;
+  font-weight: 500;
+}
+
+#articles .readmore:hover {
+  color: #4665ff;
+}
