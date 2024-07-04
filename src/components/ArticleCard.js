@@ -10,14 +10,19 @@ const data = {
     "name": "潘威利",
     "imgUrl": "/威利.jpg"
   },
-  "content": "咻咻咻 ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio",
+  "content": "咻咻咻 ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio minima minima minima",
   "tags": ["#文章", "#哈囉"],
-  // "smallImgUrl": "/about.jpg" // TODO: 這邊應該要接到圖在遠端的位置，圖不會放在本機
   "smallImgUrl": '/about.jpg' // TODO: 這邊應該要接到圖在遠端的位置，圖不會放在本機
 }
 
-export default function ArticleCard ({ articleData = data }){
-  const { smallImgUrl, title, content, author, publishedTime } = articleData
+export default function ArticleCard ({ articleData }){
+  const {
+    smallImgUrl,
+    title,
+    content,
+    author,
+    publishedTime,
+    tags } = articleData
   const validImgUrl = smallImgUrl || '/altImg.png'
   
   return (
@@ -33,10 +38,16 @@ export default function ArticleCard ({ articleData = data }){
       <div className="right">
         <div className="title"> 
           { title } 
-          <span> {`published @ ${publishedTime}`} </span>
+          <span className="publishedTime"> {`published @ ${publishedTime}`} </span>
+          <span className="tags">
+            { tags.map( tag =>  <span className="tag"> { tag } </span> )}
+          </span>
+          
         </div>
-        <div className="content"> { truncateContent(content) } </div>
-        <div className="readmore"> Read more ...</div>
+        <div className="content"> 
+          { truncateContent(content) } 
+          <span className="readmore"> Read more </span>
+        </div>
         <div className="icon">
           <Image
             src={author.imgUrl}

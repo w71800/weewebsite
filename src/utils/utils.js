@@ -30,5 +30,16 @@ function createArticlesLoader() {
     console.log(nextPage);
   }
 }
-
 export const articlesLoader = createArticlesLoader()
+
+
+function keywordIsExist(article, input) {
+  let { title, tags } = article
+  return title.includes(input) || tags.some( tag => tag.includes(input) )
+}
+export const articleFilter = (source, input) => {
+  let result = []
+
+  result = source.filter( article => keywordIsExist(article, input) )
+  return result
+}

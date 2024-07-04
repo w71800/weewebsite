@@ -23,7 +23,7 @@
   margin-bottom: 1rem;
 }
 .articleCard .content {
-  color: #888;
+  color: #999;
   line-height: 2rem;
   font-size: 1.2rem;
 }
@@ -33,24 +33,32 @@
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  top: 10px;
+  bottom: -18px;
   right: 10px;
 }
 .articleCard .readmore {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
+  left: 1rem;
   text-decoration: underline;
-  color: #999;
-  font-size: 1.2rem;
+  color: #777;
+  font-size: 1.1rem;
+  font-weight: 400;
   cursor: pointer;
+  font-style: italic;
 }
 
 .title span {
   font-size: 1rem;
-  left: 1rem;
   color: #888;
-  font-weight: 500;
+}
+.title span.publishedTime {
+  font-weight: 300;
+  left: 1rem;
+}
+.title span.tags {
+  margin: 25px;
+}
+.title span.tag {
+  font-weight: 400;
 }
 
 #articles .readmore:hover {
