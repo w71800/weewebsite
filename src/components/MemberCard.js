@@ -1,8 +1,16 @@
 import Image from "next/image"
+import { useState } from "react"
 // import "@/styles/memberCard.sass"
 
 export default function MemberCard({data: member, ...props }) {
   const { name, imgUrl, position, content } = member
+
+  const [ validImgUrl, setValidImgUrl] = useState(imgUrl)
+
+  const handerError = () => {
+    setValidImgUrl('/members/member_alt.png')
+    console.log(validImgUrl);
+  }
   return (
   <div 
     className={props.className}
@@ -10,9 +18,10 @@ export default function MemberCard({data: member, ...props }) {
     style={props.style}
     >
     <Image 
-      src={imgUrl}
+      src={validImgUrl}
       width={400}
       height={400}
+      onError={handerError}
     />
     <h1 className="name">{ name }</h1>
     <h3 className="position">{ position }</h3>

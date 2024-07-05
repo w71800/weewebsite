@@ -11,7 +11,7 @@ export default function Members() {
     {
       name: "潘威利",
       position: "前端工程師",
-      imgUrl: "/威利.jpg",
+      imgUrl: "/members/潘威利.png",
       content: "技術是為了眾人而存在，而我們用技術來服務眾人",
       projects: [
         {
@@ -21,74 +21,106 @@ export default function Members() {
         {
           name: "WeeMed 官方形象網站（企劃、前端工程師）",
           role: "企劃、前端工程師"
-        },
+        }
       ]
     },
     {
-      name: "潘威利",
-      position: "前端工程師",
-      imgUrl: "/威利.jpg",
-      content: "技術是為了眾人而存在，而我們用技術來服務眾人",
+      name: "賴柏瑜",
+      position: "後端工程師",
+      imgUrl: "/members/賴柏瑜.png",
+      content: "Technology lies in humanity.",
       projects: [
         {
-          name: "高雄市市立大同醫院 ebest 智慧清床系統",
-          role: "Line 端工程師"
-        },
-        {
-          name: "WeeMed 官方形象網站（企劃、前端工程師）",
-          role: "企劃、前端工程師"
-        },
+          name: "大同醫院健檢中心網站",
+          role: "後端工程師"
+        }
       ]
     },
     {
-      name: "潘威利",
-      position: "前端工程師",
-      imgUrl: "/威利.jpg",
-      content: "技術是為了眾人而存在，而我們用技術來服務眾人",
+      name: "林靜雪",
+      position: "實習生",
+      imgUrl: "/members/林靜雪.png",
+      content: "在協作中成長，共繪理想藍圖",
       projects: [
         {
-          name: "高雄市市立大同醫院 ebest 智慧清床系統",
-          role: "Line 端工程師"
-        },
-        {
-          name: "WeeMed 官方形象網站（企劃、前端工程師）",
-          role: "企劃、前端工程師"
-        },
+          name: "高雄市市立大同醫院簽到系統(Line端)",
+          role: ""
+        }
       ]
     },
     {
-      name: "潘威利",
-      position: "前端工程師",
-      imgUrl: "/威利.jpg",
-      content: "技術是為了眾人而存在，而我們用技術來服務眾人",
+      name: "Shan",
+      position: "後端工程師",
+      imgUrl: "/members/Shan.png",
+      content: "改變的確需要勇氣，但結果值得冒險。 <全職高手 - 葉修>",
       projects: [
         {
-          name: "高雄市市立大同醫院 ebest 智慧清床系統",
-          role: "Line 端工程師"
+          name: "童話童畫",
+          role: "後端工程師"
         },
         {
-          name: "WeeMed 官方形象網站（企劃、前端工程師）",
-          role: "企劃、前端工程師"
-        },
+          name: "WebAR",
+          role: "工程師"
+        }
       ]
     },
     {
-      name: "潘威利",
+      name: "Jim Zhang",
       position: "前端工程師",
-      imgUrl: "/威利.jpg",
-      content: "技術是為了眾人而存在，而我們用技術來服務眾人",
+      imgUrl: "/members/Jim Zhang.png",
+      content: "Know thyself.",
       projects: [
         {
-          name: "高雄市市立大同醫院 ebest 智慧清床系統",
-          role: "Line 端工程師"
+          name: "Talkie",
+          role: "前端"
         },
         {
-          name: "WeeMed 官方形象網站（企劃、前端工程師）",
-          role: "企劃、前端工程師"
-        },
+          name: "VR Serious Game",
+          role: "企劃"
+        }
       ]
     },
-  ]
+    {
+      name: "李森儀 Sammy",
+      position: "網頁企劃",
+      imgUrl: "/members/李森儀 Sammy.png",
+      content: "The details are not the details. They make the design.",
+      projects: [
+        {
+          name: "大同醫院健檢中心英文版網站",
+          role: "專案經理"
+        },
+        {
+          name: "社區照顧關懷據點",
+          role: "專案經理"
+        },
+        {
+          name: "大同船員體檢報告",
+          role: "專案經理"
+        },
+        {
+          name: "大同醫院病床終期清消調度系統",
+          role: "網頁企劃"
+        },
+        {
+          name: "大同醫院健檢中心報告電子簽收系統",
+          role: "網頁企劃"
+        },
+        {
+          name: "大同醫院電子秤重系統",
+          role: "網頁企劃"
+        },
+        {
+          name: "雲科人文學院-英文網站",
+          role: "網頁企劃"
+        },
+        {
+          name: "HI-HOPE個案管理系統",
+          role: "網頁企劃"
+        }
+      ]
+    }
+  ];
 
   function handleLeftClicked() {
     setNowIndex(prev => {
