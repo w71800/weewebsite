@@ -3,13 +3,16 @@ import { useState } from "react"
 // import "@/styles/memberCard.sass"
 
 export default function MemberCard({data: member, ...props }) {
-  const { name, imgUrl, position, content } = member
+  const { 
+    name, 
+    imgUrl, 
+    position, 
+    content } = member
 
-  const [ validImgUrl, setValidImgUrl] = useState(imgUrl)
+  const [ validImgUrl, setValidImgUrl ] = useState(imgUrl)
 
   const handerError = () => {
     setValidImgUrl('/members/member_alt.png')
-    console.log(validImgUrl);
   }
   return (
   <div 

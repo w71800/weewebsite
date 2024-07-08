@@ -39,7 +39,6 @@ function keywordIsExist(article, input) {
 }
 export const articleFilter = (source, input) => {
   let result = []
-
   result = source.filter( article => keywordIsExist(article, input) )
   return result
 }

@@ -2,7 +2,7 @@
 
 import ArticleCard from "@/components/ArticleCard"
 import LoadmoreButton from "@/components/LoadmoreButton"
-import Image from "next/image"
+import SearchInput from "./components/SearchInput"
 import { useEffect, useState } from "react"
 import '@/styles/articles.sass'
 import { articlesLoader, articleFilter } from "@/utils/utils"
@@ -16,7 +16,7 @@ export default function Articles() {
       "author": {
         "id": 1,
         "name": "潘威利",
-        "imgUrl": "/威利.jpg"
+        "imgUrl": "/members/潘威利.png"
       },
       "content": "咻咻咻 ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio minima minima minima",
       "tags": ["#文章", "#哈囉"],
@@ -29,7 +29,7 @@ export default function Articles() {
       "author": {
         "id": 1,
         "name": "潘威利",
-        "imgUrl": "/威利.jpg"
+        "imgUrl": "/members/潘威利.png"
       },
       "content": "ure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio minima minima minima",
       "tags": ["#喵嗚"],
@@ -41,52 +41,42 @@ export default function Articles() {
       "author": {
         "id": 1,
         "name": "潘威利",
-        "imgUrl": "/威利.jpg"
+        "imgUrl": "/members/潘威利.png"
       },
       "content": "ure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio minima minima minima",
       "tags": ["#咻咻"],
     }
   ]
   const [ searchValue, setSearchValue ] = useState("")
-  const [ filteredArticles, setFilteredArticles ] = useState([])
-  const [ isBlured, setIsBlured ] = useState(false)
+  const [ displayedArticles, setDisplayedArticles ] = useState(defaultArticles)
   
-  function handleChange(event) {
+  const handleValueChange = (event) => {
     setSearchValue(event.target.value)
   }
-  function handleBlur() {
-    setIsBlured(true)
-    let result = articleFilter(defaultArticles, searchValue)
-    setFilteredArticles(result)
+
+  const handleSearch = () => {
+    const filtered = articleFilter(defaultArticles, searchValue)
+    setDisplayedArticles(filtered)
   }
   
-  const displayedArticles = isBlured ? filteredArticles : defaultArticles
   
   return (
     <div id="articles">
       <div className="container">
         <div className="panel">
-          <div className="search">
-            <input 
-              type="text" 
-              placeholder="請輸入標題關鍵字或標籤"
-              onBlur={handleBlur}
-              onChange={handleChange}
-            />
-            <Image 
-              src='/search.png'
-              width={64}
-              height={64}
-            />
-          </div>
+          <SearchInput 
+            onValueChange={handleValueChange}
+            onSearch={handleSearch}
+          />
         </div>
-        { displayedArticles.map( article => <ArticleCard articleData={ article }/> ) }
-        {/* <div 
-          className={`searchHint ${filteredArticles.length == 0 && isBlured ? 'show' : ''}`}
+        {displayedArticles.map((article, index) => (
+          <ArticleCard key={index} articleData={ article }/>
+        ))}
+        <div 
+          className={`searchHint ${displayedArticles.length !== 0 ? '' : 'show'}`}
         > 
-        查無此文章 
-        </div> */}
-        {/* <LoadmoreButton onClick={ () => articlesLoader() } /> */}
+          查無相關文章 
+        </div>
       </div>
     </div>
   )
