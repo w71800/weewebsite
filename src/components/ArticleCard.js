@@ -22,7 +22,8 @@ export default function ArticleCard ({ articleData }){
     content,
     author,
     publishedTime,
-    tags } = articleData
+    tags,
+    id } = articleData
   const validImgUrl = smallImgUrl || '/altImg.png'
   
   return (
@@ -40,13 +41,15 @@ export default function ArticleCard ({ articleData }){
           { title } 
           <span className="publishedTime"> {`published @ ${publishedTime}`} </span>
           <span className="tags">
-            { tags.map( tag =>  <span className="tag"> { tag } </span> )}
+            { tags.map( (tag, index) =>  <span className="tag" key={index}> { tag } </span> )}
           </span>
           
         </div>
         <div className="content"> 
           { truncateContent(content) } 
-          <span className="readmore"> Read more </span>
+          <span className="readmore"> 
+            <a href={`/article/${id}`}> Read more </a> 
+          </span>
         </div>
         <div className="icon">
           <Image

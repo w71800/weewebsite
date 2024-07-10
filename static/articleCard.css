@@ -33,10 +33,10 @@
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  bottom: -18px;
+  top: 0;
   right: 10px;
 }
-.articleCard .readmore {
+.articleCard .readmore a {
   left: 1rem;
   text-decoration: underline;
   color: #777;
@@ -61,6 +61,6 @@
   font-weight: 400;
 }
 
-#articles .readmore:hover {
+#articles .readmore:hover a {
   color: #4665ff;
 }

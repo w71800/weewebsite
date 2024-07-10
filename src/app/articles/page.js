@@ -3,7 +3,7 @@
 import ArticleCard from "@/components/ArticleCard"
 import LoadmoreButton from "@/components/LoadmoreButton"
 import SearchInput from "./components/SearchInput"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import '@/styles/articles.sass'
 import { articlesLoader, articleFilter } from "@/utils/utils"
 

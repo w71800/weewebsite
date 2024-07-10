@@ -1,3 +1,5 @@
+const DOMAIN = ''
+
 export const isAtoZ = (char) => {
   const regex = /^[A-Za-z]$/
   return regex.test(char)
@@ -41,4 +43,13 @@ export const articleFilter = (source, input) => {
   let result = []
   result = source.filter( article => keywordIsExist(article, input) )
   return result
+}
+
+export const getArticle = (id) => {
+  const endpoint = `${DOMAIN}/`
+  return fetch(endpoint, {
+    method: 'GET',
+    headers: {},
+  })
+  .then( res => { msg: "HELLO" })
 }

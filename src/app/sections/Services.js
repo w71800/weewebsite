@@ -47,7 +47,7 @@ export default function Services() {
           <div className="title"> { title } </div>
           <div className="content"> { content } </div>
         <div className="more">
-          <a href="/services"> Learn more... </a>
+          <a href="/services"> Learn more </a>
         </div>
         </div>
       </div>

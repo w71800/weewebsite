@@ -32,16 +32,17 @@
     border-radius: 50%
     overflow: hidden
     position: absolute
-    bottom: -18px
+    top: 0
     right: 10px
   .readmore
-    left: 1rem
-    text-decoration: underline
-    color: #777
-    font-size: 1.1rem
-    font-weight: 400
-    cursor: pointer
-    font-style: italic
+    a
+      left: 1rem
+      text-decoration: underline
+      color: #777
+      font-size: 1.1rem
+      font-weight: 400
+      cursor: pointer
+      font-style: italic
 
 .title
   span
@@ -58,4 +59,5 @@
 #articles
   .readmore
     &:hover
-      color: $color_main
+      a
+        color: $color_main
