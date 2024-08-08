@@ -1,3 +1,7 @@
+/**
+ * @author William Pan <williampan@zhelang.com.tw>
+ */
+
 import '@/styles/contact.sass'
 
 export default function Contact() {

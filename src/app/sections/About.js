@@ -1,3 +1,7 @@
+/**
+ * @author William Pan <williampan@zhelang.com.tw>
+ */
+
 import Image from "next/image"
 import style from "@/styles/about.sass"
 

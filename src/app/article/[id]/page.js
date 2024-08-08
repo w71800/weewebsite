@@ -1,3 +1,7 @@
+/**
+ * @author William Pan <williampan@zhelang.com.tw>
+ */
+
 import { getArticle } from "@/utils/utils"
 import '@/styles/article.sass'
 import Image from "next/image"
@@ -15,7 +19,7 @@ export default async function ArticlePage({ params }) {
       "position": "前端工程師"
     },
     "content": "咻咻咻 ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio! 汪汪汪汪 哈囉 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eos iure vel aspernatur animi debitis illo sint? Nisi, culpa. Provident ducimus esse necessitatibus sit quo, aspernatur fugit minima ad odio minima minima minima",
-    "tags": ["#文章", "#哈囉"],
+    "tags": ["文章", "哈囉"],
     "smallImgUrl": '/about.jpg' // TODO: 刪除掉測試資料
   }
   const {
@@ -44,9 +48,11 @@ export default async function ArticlePage({ params }) {
         <div className="title"> { title } </div>
         <div className="publishedTime"> { publishedTime } </div>
         <div className="tags"> 
-          { tags.map( tag => <span className="tag"> { tag } </span> ) }
+          { tags.map( (tag,index) => <span className="tag" key={index}> {`# ${tag}`} </span> ) }
         </div>
+        <hr className="divider" />
         <div className="content"> { content } </div>
+        <hr className="divider" />
         <div className="author"> 
           <div className="left">
             <div className="author__img">

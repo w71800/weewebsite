@@ -1,3 +1,7 @@
+/**
+ * @author William Pan <williampan@zhelang.com.tw>
+ */
+
 'use client'
 
 import style from '@/styles/members.sass'

@@ -1,3 +1,7 @@
+/**
+ * @author William Pan <williampan@zhelang.com.tw>
+ */
+
 import "@/styles/footer.sass"
 import Image from "next/image"
 

@@ -1,3 +1,7 @@
+/**
+ * @author William Pan <williampan@zhelang.com.tw>
+ */
+
 import '@/styles/privacy.sass'
 
 export default function Privacy(){

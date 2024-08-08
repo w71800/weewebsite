@@ -1,3 +1,9 @@
+/**
+ * @author William Pan <williampan@zhelang.com.tw>
+ */
+
+import Image from "next/image"
+
 const DOMAIN = ''
 
 export const isAtoZ = (char) => {
@@ -52,4 +58,15 @@ export const getArticle = (id) => {
     headers: {},
   })
   .then( res => { msg: "HELLO" })
+}
+
+export const generateContentBlock = (obj) => {
+  const { type, content } = obj
+
+  if(type === "text") {
+    return <div className="content text"></div>
+  }
+  else if(type === "image") {
+    return <Image className="content image" />
+  }
 }

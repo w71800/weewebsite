@@ -1,3 +1,6 @@
+/* * @author William Pan
+ * * @contact williampan@zhelang.com.tw
+ * */
 .memberCard, .memberCard * {
   border: 1px solid red;
 }
