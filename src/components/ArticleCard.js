@@ -42,10 +42,11 @@ export default function ArticleCard ({ articleData }){
           
         </div>
         <div className="content"> 
-          { truncateContent(content) } 
-          <span className="readmore"> 
-            <a href={`/article/${id}`}> Read more </a> 
-          </span>
+          <a href={`/article/${id}`}>
+            { truncateContent(content) } 
+            <span className="readmore"> 
+            </span>
+          </a>
         </div>
         <div className="icon">
           <Image
