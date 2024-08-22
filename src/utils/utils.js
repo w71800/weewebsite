@@ -11,7 +11,7 @@ export const isAtoZ = (char) => {
   return regex.test(char)
 }
 
-export const truncateContent = (content, num = 150) => {
+export const truncateContent = (content, num = 120) => {
   const words = []
   let engStock = ''
   content.split('')

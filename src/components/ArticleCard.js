@@ -33,14 +33,6 @@ export default function ArticleCard ({ articleData }){
   return (
     <div className="articleCard">
       <div className="left">
-        <Image
-          src={validImgUrl}
-          width={150}
-          height={150}
-          alt={smallImgUrl? "文章配圖" : "預設佔位圖"}
-        ></Image>
-      </div>
-      <div className="right">
         <div className="title"> 
           { title } 
           <span className="publishedTime"> {`published @ ${publishedTime}`} </span>
@@ -63,6 +55,16 @@ export default function ArticleCard ({ articleData }){
           ></Image>
         </div>
       </div>
+      {smallImgUrl && (
+        <div className="right">
+          <Image
+            src={validImgUrl}
+            width={150}
+            height={150}
+            alt={smallImgUrl ? "文章配圖" : "預設佔位圖"}
+          />
+        </div>
+      )}
     </div>
   )
 }

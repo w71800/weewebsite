@@ -14,12 +14,11 @@
   display: flex
   margin-bottom: 50px
   border-bottom: 2px solid rgba(#999, .4)
-  padding-bottom: 30px
+  padding-bottom: 40px
   .left
-    flex: 1
-  .right
-    padding: 20px 30px
     flex: 3
+  .right
+    flex: 1
   img
     +size(100%)
     object-fit: cover
@@ -33,15 +32,18 @@
     line-height: 2rem
     font-size: 1.2rem
   .icon
-    +size(50px)
+    +size(45px)
     border-radius: 50%
     overflow: hidden
     position: absolute
-    top: 0
-    right: 10px
+    top: 4px
+    left: -70px
   .readmore
+    position: absolute
+    bottom: -35px
+    left: 0
     a
-      left: 1rem
+      // left: 1rem
       text-decoration: underline
       color: #777
       font-size: 1.1rem
@@ -66,3 +68,7 @@
     &:hover
       a
         color: $color_main
+
+.right
+  img
+    +size(100%)
